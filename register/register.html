@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        En-Af-Tee - Register
+    </title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.4/jquery.validate.min.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <div class="position">
+                <div class="header-div1">
+                    <figure>
+                        <img src="../images/logo.png" alt="" />
+                    </figure>
+                </div>
+                <div class="header-div2">
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="../index.html">
+                                    Home
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../collect/collect.html">
+                                    Collections
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../roadmap/roadmap.html">
+                                    Roadmap
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../faq/faq.html">
+                                    FAQs
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../register/register.html">
+                                    Register
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="header-div3">
+                    <a class="wallet" href="../connect-wallet/connect-wallet.html"> Connect Wallet </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <section class="sec-1 container">
+        <div class="less-width">
+            <h1> REGISTER </h1>
+            <p>
+                Don't have an account? Register now.
+            </p>
+            <form id="form">
+            
+
+                <div class="div">
+    
+                    <div class="sec1-div1">
+                        <div class="label">
+                            <label for="name"> First Name </label>
+                            <input name="name" class="input" type="text">
+                        </div>
+    
+                        <div class="label">
+                            <label for="email"> Email </label>
+                            <input name="email" class="input" type="email">
+                        </div>
+    
+                        <div class="label">
+                            <label for="password"> Username </label>
+                            <input name="password" class="input" type="text">
+                        </div>
+    
+    
+                        <div>
+                            <input class="submit" type="submit">
+                        </div>
+                    </div>
+    
+                    <div class="sec1-div2">
+                        <div class="label">
+                            <label for="username"> Last Name </label>
+                            <input name="username" class="input" type="text">
+                        </div>
+    
+                        <div class="label">
+                            <label for="phone"> Phone Number </label>
+                            <input name="phone" class="input" type="number">
+                        </div>
+    
+                        <div class="label">
+                            <label for="password"> Password </label>
+                            <input name="repassword" class="input" type="password">
+                        </div>
+    
+                        <div>
+                            <input class="reset" type="reset">
+                        </div>
+                    </div>
+    
+                </div>
+    
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="position">
+                <div class="footer-div1">
+                    <a href="#">
+                        <figure>
+                            <img src="../images/logo.png" alt="" />
+                        </figure>
+                    </a>
+                </div>
+                <div class="footer-div2">
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="#"> Privacy </a>
+                            </li>
+                            <li>
+                                <a href="#"> Terms </a>
+                            </li>
+                            <li>
+                                <a href="tel:0900-78601"> Contact Us </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="footer-div3">
+                    <a href="https://discord.com/" target="_blank">
+                        <figure>
+                            <img src="../images/footer-logo1.png" alt="" />
+                        </figure>
+                    </a>
+                    <a href="https://twitter.com/i/flow/login" target="_blank">
+                        <figure>
+                            <img src="../images/footer-logo2.png" alt="" />
+                        </figure>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+<script>
+$("#form").validate({
+
+errorClass: "error fail-alert",
+validClass: "valid success-alert",
+
+rules: {
+    name: {
+        required : true,
+        minlength : 3
+    },
+
+    email: {
+        required : true,
+        email : true
+    },
+
+    password: {
+        required : true,
+        minlength : 8
+    },
+
+    username: {
+        required : true,
+        minlength : 5
+    },
+
+    phone: {
+        required : true,
+        number : true,
+        minlength : 11
+    },
+
+    repassword: {
+        required : true,
+        minlength : 8,
+        password : true
+    },
+
+// messages: {
+//     name : {
+//         required : "Please enter your name",
+//         minlength : "Your name should be atleast 3 characters"
+//     }
+// }
+
+}
+})
+</script>
+
+</html>

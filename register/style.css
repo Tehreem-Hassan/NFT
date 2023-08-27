@@ -1,0 +1,269 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --gradient: linear-gradient(to right, #f827de, #2b14f9);
+  --div-gradient: linear-gradient(127.41deg, rgba(218, 37, 226, 0.2) 14.83%, rgba(87, 24, 243, 0.2) 110.24%, rgba(255, 245, 238, 0.2) 110.24%);
+  --hover-color: #CC23E4;
+  --h1: exo-extrabold;
+  --h2: exo-semibold;
+  --text: exo-thin;
+}
+
+@font-face {
+  font-family: exo-extrabold;
+  src: url(../fonts/Exo-ExtraBold.ttf);
+}
+
+@font-face {
+  font-family: exo-semibold;
+  src: url(../fonts/Exo-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: exo-thin;
+  src: url(../fonts/Exo-Thin.ttf);
+}
+
+body {
+  /* background-image: url(../images/body-background.png); */
+  /* background-image: url(../images/body-bg.png); */
+  background-image: url(../images/compressed.jpg);
+  /* background-image: url(../images/compressed-min.jpg); */
+  background-repeat: no-repeat;
+  background-color: black;
+  color: white;
+}
+
+.hover:hover {
+  background-image: linear-gradient(to right, #2b14f9, #f827de);
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.less-width {
+  width: 70%;
+  margin: 0 auto;
+  background-image: var(--div-gradient);
+  padding: 40px 0;
+  border-radius: 10px;
+}
+
+header {
+  font-family: var(--h2);
+  font-size: large;
+}
+
+.position {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+
+header li {
+  display: inline-block;
+  padding: 15px 20px;
+}
+
+.header-div1 {
+  width: 10%;
+}
+
+.header-div2 {
+  width: 70%;
+}
+
+.header-div2 a:hover {
+  color: var(--hover-color);
+}
+
+.header-div2 a {
+  position: relative;
+}
+
+.header-div2 a:hover::before {
+  content: "";
+  background: var(--gradient);
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  left: 0;
+  height: 2px;
+  margin-top: 4px;
+}
+
+.header-div3 {
+  width: 20%;
+  text-align: right;
+  padding-top: 15px;
+}
+
+header .wallet {
+  background-color: inherit;
+  padding: 15px 50px;
+  margin-top: 15px;
+  font-family: var(--h2);
+  font-size: 20px;
+  border: 1px white solid;
+  border-radius: 5px;
+}
+
+header .wallet:hover {
+  background-image: var(--gradient);
+  border: none;
+}
+
+
+.sec-1 {
+    padding-bottom: 50px;
+}
+
+.sec-1 h1{
+    font-family: var(--h2);
+    font-size: 40px;
+    text-align: center;
+    color: white;
+}
+
+.sec-1 p {
+  font-family: var(--text);
+  font-size: 20px;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.div{
+    display: flex;
+    justify-content: space-around;
+}
+
+label{
+    font-family: var(--text);
+    font-size: 20px;
+}
+
+.label {
+  padding: 20px 0;
+}
+
+.label input {
+  width: 300px;
+}
+
+input{
+    display: block;
+    font-family: var(--h2);
+    font-size: 20px;
+    color: white;
+    background-color: var(--gradient);
+    padding: 8px 20px;
+    border-radius: 5px;
+    border: 1px rgb(112, 112, 112) solid;
+}
+
+.submit {
+  padding: 8px 50px;
+  margin-top: 10px;
+}
+
+.submit:hover{
+    background-image: var(--gradient);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.reset {
+  padding: 8px 50px;
+  margin-top: 10px;
+}
+
+.reset:hover{
+    background-image: var(--gradient);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form .note {
+    color: red;
+}
+
+.sec1-div1 {
+  width: 30%;
+  margin: 0 auto
+}
+
+.sec1-div2 {
+  width: 32%;
+  margin: 0 auto;
+}
+
+
+label.error {
+    color: red;
+    font-size: 1rem;
+    display: block;
+    margin-top: 5px;
+}
+
+input.error {
+    border: 1px solid red;
+    font-weight: 200;
+    color: rgb(197, 45, 45);
+}
+
+input.valid.error-alert{
+    font-family: var(--h2);
+}
+
+input.valid.success-alert {
+    border: 2px solid #4CAF50;
+    color: green;
+}
+
+footer {
+  background-image: url(../images/footer-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: var(--text);
+}
+
+footer li {
+  display: inline-block;
+  padding: 25px 40px;
+}
+
+footer a {
+  display: inline-block;
+}
+
+.footer-div1 {
+  width: 10%;
+  padding-top: 8px;
+}
+
+.footer-div2 {
+  width: 60%;
+  text-align: right;
+}
+
+.footer-div3 {
+  width: 30%;
+  text-align: right;
+  padding-top: 6px;
+}
